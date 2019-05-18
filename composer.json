@@ -1,5 +1,5 @@
 {
-    "name": "sge",
+    "name": "open-day",
     "require": {
         "php": ">=7.0"
     },
