@@ -1,0 +1,38 @@
+<header class="header">
+    <h1>Open Day</h1>
+    <p>Seja bem-vindo!</p>
+</header>
+
+<main class="form-align">
+    
+    <form action="/cadastrar" method="post" class="form-register">
+    <?php if($this->view->erroCadastro) { ?>
+        <div class="msg-box msg-error">
+            <small class="text-error"><strong>Erro ao tentar realizar o cadastro!</strong> Verifique se os campos foram preenchidos corretamente. </small>
+        </div>
+    <?php } ?>
+        <div class="input-grande">
+            <span>Nome</span>
+            <input type="text" name="nome" class="input-radius"/>
+        </div>
+        <div class="input-medio">
+            <label>Telefone</label>
+            <input type="text" name="instituicao" class="input-radius"/>
+        </div>
+        <div class="input-medio">
+            <label>Área de Interesse</label>
+            <input type="text" name="curso" class="input-radius">
+        </div>
+        <div class="input-medio">
+            <label>E-mail</label>
+            <input type="text" name="login" class="input-radius">
+        </div>
+        <div class="input-medio">
+            <label>Senha</label>
+            <input type="text" name="senha" class="input-radius">
+        </div>
+        <div class="input-grande">
+            <button type="submit" class="btn-register btn-right btn-space-top">Navegar</button>
+        </div>
+    </form>
+</main>

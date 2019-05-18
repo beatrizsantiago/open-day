@@ -1,0 +1,61 @@
+.card-atividade {
+    width: 500px;
+    height: 250px;
+}
+
+.card-img-atividade {
+    width: 30%;
+    height: inherit;
+}
+
+.card-img-atividade img {
+    position: relative;
+    width: 100%;
+}
+
+.body-card-atividade {
+    width: 70%;
+    height: inherit;
+}
+
+.body-card-atividade div {
+    font-size: 17px;
+    line-height: 24px;
+    text-align: justify;
+}
+
+.div-grande {
+    width: 100%;
+    display: block;
+}
+
+.div-media {
+    width: 64.7%;
+    display: inline-block;
+}
+
+.div-pequena {
+    width: 32%;
+    display: inline-block;
+}
+
+.body-card-atividade h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    margin: 0px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.body-card-atividade p {
+    height: 40px;
+    margin-top: 8px;
+    padding-top: 5px;
+    font-size: 15px;
+    text-align: justify;
+    border-top: 1px solid #b8b8b8;
+    box-sizing: border-box;
+}

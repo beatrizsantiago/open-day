@@ -1,0 +1,33 @@
+:root {
+    --sombra-box: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    --cor-sge: #41b9ff;
+}
+
+.grid-base {
+    display: grid;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas: "menu" "content";
+    height: 100vh;
+}
+
+aside.menu-topo {
+    grid-area: menu;
+    position: fixed;
+    height: inherit;
+    max-height: 60px;
+}
+
+.content {
+    grid-area: content;
+}
+
+body {
+    background-color: #fafafa;
+    font-family: sans-serif;
+    margin: 0px;
+}
+
+.space-top {
+    position: relative;
+    top: 40px;
+}

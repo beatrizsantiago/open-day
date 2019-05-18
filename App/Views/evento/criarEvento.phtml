@@ -1,0 +1,35 @@
+<?php
+
+    require_once '../App/ValidaLogin.php';
+
+?>
+
+<aside class="menu-topo">
+    <nav class="menu">
+        <a href="/index_evento"><img src="./img/icons/eventos.png">Áreas Profissionais</a>
+        <!--h1>Criar Área</h1-->
+        <a href="/sair" class="sair">Sair</a>
+    </nav>
+</aside>
+
+<section class="grid-base">
+    <main class="content">
+
+    <div class="form-align">
+        <form action="/cadastrar_evento" method="post" class="form-register space-top">
+            <div class="input-grande">
+                <span>Área Profissional</span>
+                <input type="text" name="titulo" maxlength="50" class="input-radius">
+            </div>
+            <div class="input-grande">
+                <label>Descrição</label>
+                <textarea name="descricao" class="radius-textarea" rows="5" maxlength="140"></textarea>
+            </div>
+            <div class="input-grande">
+                <button type="submit" class="btn-register btn-right btn-space-top">Adicionar</button>
+            </div>
+        </form>
+    </div>
+
+    </main>
+</section>

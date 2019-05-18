@@ -1,0 +1,46 @@
+<?php
+
+    require_once '../App/ValidaLogin.php';
+    require_once '../App/Views/evento/menuAtividade.phtml';
+    $idAtividade = $_POST['atividades'];
+
+?>
+
+<section class="grid-base">
+    <main class="content">
+        <h1 class="title-center-align">Área de nome_area</h1>
+        <hr>
+        <section class="card">
+            <?php foreach($this->view->atividades as $atividade) { ?>
+                <form action="/acao_atividade" method="post" class="card-atividade card-block">
+
+                    <div class="card-img card-img-atividade">
+                        <img src="./img/<?= explode(" ", $atividade['tipo'])[0] ?>.png" alt="Tipo Atividade">
+                    </div>
+
+                    <div class="body-card body-card-atividade">
+                        <h1><?= $atividade['tipo'] ?></h1>
+                        <div class="div-grande">Tema: <strong><?= $atividade['tema'] ?></strong></div>
+
+                        <div class="div-grande">
+                            <div class="div-media">Local: <strong><?= $atividade['local'] ?></strong></div>
+                            <div class="div-pequena">Hora: <strong><?= $atividade['hora'] ?>h</strong></div>
+                        </div>
+
+                        <?php if($atividade['descricao'] != '') { ?>
+                            <p><?= $atividade['descricao'] ?></p>
+                        <?php } else { ?>
+                            <br/>
+                        <?php } ?>
+
+                        <div class="btn-card btn-card-atividade">
+                            <button type="submit" name="cancelar" value="<?= $atividade['id'] ?>" class="btn-danger-full">Cancelar</button>
+                            <button type="submit" name="alterar" value="<?= $atividade['id'] ?>" class="btn-warning-full">Alterar</button>
+                        </div>
+                    </div>
+
+                </form>
+            <?php } ?>
+        </section>
+    </main>
+</section>
