@@ -4,6 +4,29 @@
     justify-content: center;
 }
 
+.card-block-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    background-color: #fff;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: var(--sombra-box);
+    overflow: hidden;
+}
+
+.card-block-row {
+    display: flex;
+    align-items: center;
+    height: 82%;
+    margin: 10px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
 .card-block {
     display: flex;
     align-items: center;
@@ -33,4 +56,5 @@
 .btn-card {
     display: flex;
     justify-content: space-around;
+    margin-top: 10px;
 }

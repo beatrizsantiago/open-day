@@ -15,6 +15,10 @@ button, .btn-link {
     margin-top: 25px;
 }
 
+.btn-space-down {
+    margin-top: 10px;
+}
+
 .btn-right {
     float: right;
     margin-left: 10px;

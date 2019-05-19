@@ -25,3 +25,20 @@
 .content hr {
     width: 80%;
 }
+
+.align-title {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 120;
+}
+
+.title {
+    font-size: 20px;
+    color: #fff;
+}

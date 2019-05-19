@@ -4,18 +4,16 @@
 
 ?>
 
+<div class="align-title"><h1 class="title">Áreas Profissionais</h1></div>
 <aside class="menu-topo">
     <nav class="menu">
         <a href="/criar_evento"><img src="./img/icons/criar-evento.png">Criar Área</a>
-        <!--h1>Áreas Profissionais</h1-->
         <a href="/sair" class="sair">Sair</a>
     </nav>
 </aside>
 
 <section class="grid-base">
     <main class="content">
-        <h1 class="title-center-align">Áreas Profissionais</h1>
-        <hr>
         <section class="card">
             <?php foreach($this->view->eventos as $evento) { ?>
                 <form action="/acao_evento" method="post" class="card-evento card-block">
@@ -28,7 +26,7 @@
                             <button type="submit" value="<?= $evento['id'] ?>" name="alterar" class="btn-warning-full">Alterar</button>
                             <button type="submit" value="<?= $evento['id'] ?>" name="criar_atividade" class="btn-register-full">Criar Atividade</button>
                         </div>
-                        <div class="btn-card btn-card-evento">
+                        <div class="btn-card btn-card-evento btn-space-down">
                             <button type="submit" value="<?= $evento['id'] ?>" name="ver_atividades" class="btn-confirm-full">Ver Atividades</button>
                         </div>
                     </div>

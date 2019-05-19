@@ -25,28 +25,9 @@
 
             $cadastrarEvento->adicionarEvento();
 
+            //print_r($cadastrarEvento);
             header('Location: /index_evento');
         }
-
-        /*public function acaoEvento() {
-
-            if(isset($_POST['cancelar'])) {
-                $cancelar = Container::getModel('Evento');
-                $cancelar->__set('id', $_POST['cancelar']);
-
-                $cancelar->deletarEvento();
-                header('Location: /index_evento');
-            }
-            if(isset($_POST['alterar'])) {
-                print_r($_POST['alterar']);
-            }
-            if(isset($_POST['atividades'])) {
-                
-                //print_r($_POST['atividades']);
-                header('Location: /index_atividade');
-            }
-                       
-        }*/
 
         public function acaoEvento() {
             if(isset($_POST['ver_atividades'])) {
