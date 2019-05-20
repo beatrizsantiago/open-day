@@ -1,0 +1,22 @@
+
+
+    <header class="header">
+        <h1>Open Day</h1>
+        <!--hr-->
+        <p>Seja bem-vindo(a)!</p>
+    </header>
+    <main class="content">
+        <section class="card">
+            <?php foreach($this->view->eventos as $evento) { ?>
+                <a href="/lista_atividade?id=<?= $evento['id'] ?>" class="card-evento card-block" style="text-decoration: none; color: #000">
+                    <div class="card-img card-img-evento">
+                        <img src="./img/evento.png" alt="evento">
+                    </div>
+                    <div class="body-card body-card-evento">
+                        <h1><?= $evento['titulo'] ?></h1>
+                        <p><?= $evento['descricao'] ?></p>
+                    </div>
+                </a>
+            <?php } ?>
+        </section>
+    </main>

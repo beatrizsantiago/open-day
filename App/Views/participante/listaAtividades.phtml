@@ -1,23 +1,13 @@
-<?php
+<div class="header-align">
+    <!--a href="/area_profissional" class="btn-link voltar btn-confirm-full" >Voltar</a-->
+    <?php foreach($this->view->atividades as $atividade) { ?>
+        <div class="align-title-atv">
+            <h1 class="title-lista-atv"><?= $atividade['titulo'] ?> </h1>
+        </div>
+    <?php } ?>
+</div>
 
-    require_once '../App/ValidaLogin.php';
-    //$idAtividade = $_POST['atividades'];
-
-?>
-
-<?php foreach($this->view->atividades as $atividade) { ?>
-    <div class="align-title"><h1 class="title"> <?= $atividade['titulo'] ?> </h1></div>
-<?php } ?>
-
-
-<aside class="menu-topo">
-    <nav class="menu">
-        <a href="/index_evento"><img src="./img/icons/eventos.png">Áreas Profissionais</a>
-        <a href="/sair" class="sair">Sair</a>
-    </nav>
-</aside>
-
-<section style="position: relative; top: 60px;">
+<section class="grid-base">
     <main class="content">
         <section class="card">
             <?php foreach($this->view->atividades as $atividade) { ?>
@@ -37,6 +27,7 @@
                             <div class="div-grande">Tema: <strong><?= $atividade['tema'] ?></strong></div>
 
                             <div class="div-grande">Local: <strong><?= $atividade['local'] ?></strong></div>
+
                             <div class="div-grande">Hora: <strong><?= $atividade['hora'] ?>h</strong></div>
 
                             <?php if($atividade['descricao'] != '') { ?>
@@ -44,11 +35,6 @@
                             <?php } else { ?>
                                 <br/>
                             <?php } ?>
-
-                            <div class="btn-card btn-card-atividade">
-                                <button type="submit" name="deletar" value="<?= $atividade['id'] ?>" class="btn-danger-full">Deletar</button>
-                                <button type="submit" name="alterar" value="<?= $atividade['id'] ?>" class="btn-warning-full">Alterar</button>
-                            </div>
                         </div>
                     </div>
 

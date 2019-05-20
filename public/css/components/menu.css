@@ -58,3 +58,9 @@
     font-size: 20px;
     text-align: center;
 }
+
+.voltar {
+    position: fixed;
+    right: 20px;
+    z-index: 150;
+}

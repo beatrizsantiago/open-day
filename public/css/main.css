@@ -1,5 +1,5 @@
 :root {
-    --sombra-box: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    --sombra-box: 0px 0px 20px rgba(31, 31, 31, 0.1);
     --cor-sge: #41b9ff;
 }
 
@@ -10,7 +10,7 @@
     height: 100vh;
 }
 
-aside.menu-topo {
+.menu-topo {
     grid-area: menu;
     position: fixed;
     height: inherit;

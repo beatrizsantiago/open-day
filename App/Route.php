@@ -85,6 +85,18 @@
                 'action' => 'cadastrarAtividade'
             ];
 
+            $routes['areaProfissional'] = [
+                'route' => '/area_profissional',
+                'controller' => 'ParticipanteController',
+                'action' => 'listarAreas'
+            ];
+
+            $routes['listaAtividades'] = [
+                'route' => '/lista_atividade',
+                'controller' => 'ParticipanteController',
+                'action' => 'listaAtividade'
+            ];
+
             $this->setRoutes($routes);
         }
 

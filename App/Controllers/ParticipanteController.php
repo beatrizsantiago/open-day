@@ -24,25 +24,41 @@
             $participante = Container::getModel('Participante');
             $participante->__set('nome', $_POST['nome']);
             $participante->__set('apelido', explode(" ", $_POST['nome'])[0]);
-            $participante->__set('instituicao', $_POST['instituicao']);
-            $participante->__set('curso', $_POST['curso']);
+            $participante->__set('instituicao', $_POST['telefone']);
+            $participante->__set('curso', $_POST['area']);
             $participante->__set('login', $_POST['login']);
-            $participante->__set('senha', md5($_POST['senha']));
 
             if(count($participante->getUsuarioLogin()) == 0) {
                 $participante->criarParticipante();
-                $this->render('sucessoCadastro');
+
+                header('Location: /area_profissional');
+                
             } else {
                 $this->view->participante = [
                     'nome' => $_POST['nome'],
-                    'instituicao' => $_POST['instituicao'],
-                    'curso' => $_POST['curso'],
-                    'login' => $_POST['login'],
-                    'senha' => $_POST['senha']
+                    'instituicao' => $_POST['telefone'],
+                    'curso' => $_POST['area'],
+                    'login' => $_POST['login']
                 ];
                 $this->view->erroCadastro = true;
             }
+        }
 
+        public function listarAreas() {
+            $listaEvento = Container::getModel('Evento');
+            $this->view->eventos = $listaEvento->listarEventos();
+
+            $this->render('indexParticipante');
+        }
+
+        public function listaAtividade() {
+            $listaAtividade = Container::getModel('Atividade');
+            $listaAtividade->__set('id', $_GET['id']);
+            $this->view->atividades = $listaAtividade->listarAtividades();
+            
+            $this->render('listaAtividades');
+
+            //print_r($_GET['id']);
         }
     }
 
