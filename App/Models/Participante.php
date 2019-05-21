@@ -6,12 +6,11 @@
 
     class Participante extends Usuario {
 
-        private $idUsuario;
         private $nome;
-        private $apelido;
-        private $instituicao;
-        private $curso;
-        private $imgUser;
+        private $email;
+        private $escola;
+        private $area;
+        private $telefone;
 
         public function __get($atributo) {
             return $this->$atributo;
@@ -23,30 +22,19 @@
 
         public function criarParticipante() {
             $query = "
-                insert into usuario(login, senha) values (:login, 'asdasd');
-                insert into participante(idUsuario, nome, apelido, instituicao, curso) values (LAST_INSERT_ID(), :nome, :apelido, :instituicao, :curso);
+                insert into participante(nome, email, escola, area, telefone) values ( :nome, :email, :escola, :area, :telefone);
             ";
 
             $stmt = $this->db->prepare($query);
 
             $stmt->bindValue(':nome', $this->__get('nome'));
-            $stmt->bindValue(':apelido', $this->__get('apelido'));
-            $stmt->bindValue(':instituicao', $this->__get('instituicao'));
-            $stmt->bindValue(':curso', $this->__get('curso'));
-            $stmt->bindValue(':login', $this->__get('login'));
+            $stmt->bindValue(':email', $this->__get('email'));
+            $stmt->bindValue(':escola', $this->__get('escola'));
+            $stmt->bindValue(':area', $this->__get('area'));
+            $stmt->bindValue(':telefone', $this->__get('telefone'));
             $stmt->execute();
 
             return $this;
-        }
-
-        public function listarParticipante() {
-            $query = "
-                select apelido 
-                from participante
-            ";
-            $stmt = $this->db->prepare($query);
-            $stmt->execute();
-            return $stmt->fetchAll(\PDO::FETCH_ASSOC);
         }
 
     }

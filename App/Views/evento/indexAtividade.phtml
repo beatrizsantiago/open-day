@@ -24,18 +24,13 @@
                 <form action="/acao_atividade" method="post" class="card-atividade card-block-column">
 
                     <div class="card-title">
-                        <h1><?= $atividade['tipo'] ?></h1>
+                        <h1><?= $atividade['tema'] ?></h1>
                         <hr>
                     </div>
 
                     <div class="card-block-row">
-                        <div class="card-img card-img-atividade">
-                            <img src="./img/<?= explode(" ", $atividade['tipo'])[0] ?>.png" alt="Tipo Atividade">
-                        </div>
 
                         <div class="body-card body-card-atividade">
-                            <div class="div-grande">Tema: <strong><?= $atividade['tema'] ?></strong></div>
-
                             <div class="div-grande">Local: <strong><?= $atividade['local'] ?></strong></div>
                             <div class="div-grande">Hora: <strong><?= $atividade['hora'] ?>h</strong></div>
 

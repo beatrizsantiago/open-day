@@ -1,0 +1,68 @@
+CREATE DATABASE IF NOT EXISTS openday DEFAULT CHARACTER SET utf8;
+
+CREATE TABLE IF NOT EXISTS `openday`.`Usuario` (
+  
+	`id` INT NOT NULL AUTO_INCREMENT UNIQUE PRIMARY KEY,
+ 
+	`login` VARCHAR(100) NOT NULL,
+ 
+	`senha` VARCHAR(32) NOT NULL
+)
+
+ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS `openday`.`Evento` (
+  
+	`id` INT NOT NULL AUTO_INCREMENT UNIQUE PRIMARY KEY,
+  
+	`nome` VARCHAR(180) NOT NULL,
+  
+	`local` VARCHAR(255) NULL,
+  
+	`descricao` VARCHAR(255) NULL
+)
+
+ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS `openday`.`Atividade` (
+ 
+	`id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY UNIQUE,
+ 
+	`tema` VARCHAR(180) NOT NULL,
+ 
+	`hora` TIME NULL,
+ 
+	`local` VARCHAR(120) NULL,
+ 
+	`descricao` VARCHAR(255) NULL,
+ 
+	`eventoID` INT NOT NULL,
+	INDEX `eventoID_idx` (`eventoID` ASC) VISIBLE,
+ 
+	CONSTRAINT `eventoID`
+
+	FOREIGN KEY (`eventoID`)
+ REFERENCES `openday`.`Evento` (`id`)
+ ON DELETE CASCADE
+ ON UPDATE CASCADE
+)
+
+ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS `openday`.`participante` (
+ 
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY UNIQUE,
+ 
+	`nome` varchar(255) NOT NULL,
+ 
+	`email` varchar(255) NOT NULL,
+ 
+	`escola` varchar(100) NOT NULL,
+ 
+	`telefone` varchar(30) NOT NULL,
+ 
+	`area` varchar(255) NOT NULL
+
+)
+
+ENGINE = InnoDB;

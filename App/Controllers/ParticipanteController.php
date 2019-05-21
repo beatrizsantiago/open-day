@@ -10,12 +10,11 @@
         public function cadastroParticipante() {
             $this->view->participante = [
                 'nome' => '',
-                'instituicao' => '',
-                'curso' => '',
-                'login' => '',
-                'senha' => ''
+                'email' => '',
+                'telefone' => '',
+                'escola' => '',
+                'area' => ''
             ];
-            $this->view->erroCadastro = false;
             $this->render('cadastroParticipante');
         }
 
@@ -23,25 +22,24 @@
 
             $participante = Container::getModel('Participante');
             $participante->__set('nome', $_POST['nome']);
-            $participante->__set('apelido', explode(" ", $_POST['nome'])[0]);
-            $participante->__set('instituicao', $_POST['telefone']);
-            $participante->__set('curso', $_POST['area']);
-            $participante->__set('login', $_POST['login']);
+            $participante->__set('email', $_POST['email']);
+            $participante->__set('telefone', $_POST['telefone']);
+            $participante->__set('escola', $_POST['escola']);
+            $participante->__set('area', $_POST['area']);
 
-            if(count($participante->getUsuarioLogin()) == 0) {
-                $participante->criarParticipante();
+            //if(count($participante->getUsuarioLogin()) == 0) {
+                //$participante->criarParticipante();
 
                 header('Location: /area_profissional');
                 
-            } else {
-                $this->view->participante = [
-                    'nome' => $_POST['nome'],
-                    'instituicao' => $_POST['telefone'],
-                    'curso' => $_POST['area'],
-                    'login' => $_POST['login']
-                ];
-                $this->view->erroCadastro = true;
-            }
+            //} else {
+                //$this->view->participante = [
+                    //'nome' => $_POST['nome'],
+                    //'instituicao' => $_POST['telefone'],
+                    //'curso' => $_POST['area'],
+                    //'login' => $_POST['login']
+                //];
+            //}
         }
 
         public function listarAreas() {

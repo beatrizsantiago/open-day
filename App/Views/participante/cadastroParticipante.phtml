@@ -5,22 +5,21 @@
 <main class="form-align">
     
     <form action="/cadastrar" method="post" class="form-register">
-    <?php if($this->view->erroCadastro) { ?>
-        <div class="msg-box msg-error">
-            <small class="text-error"><strong>Erro ao tentar realizar o cadastro!</strong> Verifique se os campos foram preenchidos corretamente. </small>
-        </div>
-    <?php } ?>
         <div class="input-grande">
             <span>Nome</span>
             <input type="text" name="nome" class="input-radius"/>
         </div>
-        <div class="input-medio">
+        <div class="input-grande">
             <label>E-mail</label>
-            <input type="text" name="login" class="input-radius">
+            <input type="text" name="email" class="input-radius">
         </div>
-        <div class="input-medio">
+        <div class="input-grande">
             <label>Telefone</label>
             <input type="text" name="telefone" class="input-radius"/>
+        </div>
+        <div class="input-grande">
+            <label>Escola</label>
+            <input type="text" name="escola" class="input-radius">
         </div>
         <div class="input-grande">
             <label>Áreas de Interesse</label>

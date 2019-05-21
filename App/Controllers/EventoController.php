@@ -20,7 +20,7 @@
         public function cadastrarEvento() {
 
             $cadastrarEvento = Container::getModel('Evento');
-            $cadastrarEvento->__set('titulo', $_POST['titulo']);
+            $cadastrarEvento->__set('nome', $_POST['nome']);
             $cadastrarEvento->__set('descricao', $_POST['descricao']);
 
             $cadastrarEvento->adicionarEvento();

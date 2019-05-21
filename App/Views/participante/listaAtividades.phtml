@@ -1,8 +1,8 @@
 <div class="header-align">
-    <!--a href="/area_profissional" class="btn-link voltar btn-confirm-full" >Voltar</a-->
+    <a href="/area_profissional" class="btn-link voltar btn-confirm-full" >Voltar</a>
     <?php foreach($this->view->atividades as $atividade) { ?>
         <div class="align-title-atv">
-            <h1 class="title-lista-atv"><?= $atividade['titulo'] ?> </h1>
+            <h1 class="title-lista-atv"><?= $atividade['nome'] ?> </h1>
         </div>
     <?php } ?>
 </div>
@@ -12,22 +12,14 @@
         <section class="card">
             <?php foreach($this->view->atividades as $atividade) { ?>
                 <form action="/acao_atividade" method="post" class="card-atividade card-block-column">
-
                     <div class="card-title">
-                        <h1><?= $atividade['tipo'] ?></h1>
+                        <h1><?= $atividade['tema'] ?></h1>
                         <hr>
                     </div>
 
                     <div class="card-block-row">
-                        <div class="card-img card-img-atividade">
-                            <img src="./img/<?= explode(" ", $atividade['tipo'])[0] ?>.png" alt="Tipo Atividade">
-                        </div>
-
                         <div class="body-card body-card-atividade">
-                            <div class="div-grande">Tema: <strong><?= $atividade['tema'] ?></strong></div>
-
                             <div class="div-grande">Local: <strong><?= $atividade['local'] ?></strong></div>
-
                             <div class="div-grande">Hora: <strong><?= $atividade['hora'] ?>h</strong></div>
 
                             <?php if($atividade['descricao'] != '') { ?>
@@ -35,9 +27,9 @@
                             <?php } else { ?>
                                 <br/>
                             <?php } ?>
+
                         </div>
                     </div>
-
                 </form>
             <?php } ?>
         </section>
