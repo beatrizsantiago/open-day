@@ -27,17 +27,16 @@
             header('location: /index_evento');
         }
 
-        //public function acaoAtividade() {
-            //if(isset($_POST['deletar'])) {
-                //$deletarAtividade = Container::getModel('Atividade');
-                //$deletarAtividade->__set('id', $_POST['deletar']);
+        public function acaoAtividade() {
+            if(isset($_POST['deletar'])) {
+                $deletarAtividade = Container::getModel('Atividade');
+                $deletarAtividade->__set('id', $_POST['deletar']);
 
-                //$deletarAtividade->deletarAtividade();
+                $deletarAtividade->deletarAtividade();
 
-                //print_r($_POST['deletar']);
-                //header('Location: /index_atividade?id=' . $_POST['deletar']);
-            //}
-        //}
+                header('Location: /index_atividade?id=' . $_GET['idEvt']);
+            }
+        }
 
     }
 

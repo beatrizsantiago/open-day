@@ -25,7 +25,6 @@
 
             $cadastrarEvento->adicionarEvento();
 
-            //print_r($cadastrarEvento);
             header('Location: /index_evento');
         }
 
@@ -33,7 +32,6 @@
             if(isset($_POST['ver_atividades'])) {
                 $id = $_POST['ver_atividades'];
                 header('Location: /index_atividade?id=' . $id);
-                //print_r($_POST['atividades']);
             }
 
             if(isset($_POST['criar_atividade'])) {
@@ -45,8 +43,6 @@
                 $deletarEvento->__set('id', $_POST['deletar']);
 
                 $deletarEvento->deletarEvento();
-
-                //print_r($deletarEvento);
                 header('Location: /index_evento');
             }
         }

@@ -8,7 +8,8 @@
         <form action="/cadastrar" method="post" class="form-register">
             <div class="input-grande">
                 <span>Nome</span>
-                <input type="text" name="nome" class="input-radius"/>
+                <input type="text" name="nome" id="nome" class="input-radius"/>
+                <span class="mensagem-erro erro-direita erro-nome"></span>
             </div>
             <div class="input-grande">
                 <label>E-mail</label>
@@ -26,6 +27,11 @@
                 <label>Áreas de Interesse</label>
                 <input type="text" name="area" class="input-radius">
             </div>
+            <?php if(isset($_GET['cadastro']) == 'erro') { ?>
+                <div class="msg-box msg-error">
+                    <small class="text-error">Por favor, preencha todos os campos!</small>
+                </div>
+            <?php } ?>
             <div class="input-grande">
                 <button type="submit" class="btn-register btn-right btn-space-top">Navegar</button>
             </div>
@@ -36,4 +42,26 @@
         <img src="./img/logo_branca.png" alt="wyden">
         <h1>Sistema desenvolvido pela aluna <a href="https://beatrizsantiago.github.io/">@Beatriz Santiago</a></h1>
     </footer>
+
+    <script>
+        function validarCadastro() {
+
+            let nome = document.getElementById('nome');
+
+            msgNome = document.querySelector('.erro-nome');
+            if(nome.value.length < 3) {
+                msgNome.innerHTML = "Por favor, preencha o campo Nome!";
+                msgNome.style.opacity = 1;
+                msgNome.style.transition = '1s';
+                nome.style.border = 'solid 1px red';
+                nome.onkeypress = digitar => {
+                    nome.style.border = 'solid 1px green';
+                    msgNome.style.opacity = 0;
+                }
+            } else {
+                nome.style.border = 'solid 1px green';
+                msgNome.style.opacity = 0;
+            }
+        }
+    </script>
 </body>

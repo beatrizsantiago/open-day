@@ -21,7 +21,7 @@
     <main class="content">
         <section class="card">
             <?php foreach($this->view->atividades as $atividade) { ?>
-                <form action="/acao_atividade" method="post" class="card-atividade card-block-column">
+                <form action="/acao_atividade?idEvt=<?= $atividade['id'] ?>" method="post" class="card-atividade card-block-column">
 
                     <div class="card-title">
                         <h1><?= $atividade['tema'] ?></h1>
@@ -40,10 +40,9 @@
                                 <!--br/-->
                             <?php } ?>
 
-                            <!--div class="btn-card btn-card-atividade"-->
-                                <!--button type="submit" value="<!?= $atividade['id'] ?>" name="deletar" class="btn-danger-full">Deletar</button-->
-                                <!--button type="submit" name="alterar" value="<!?= $atividade['id'] ?>" class="btn-warning-full">Alterar</button-->
-                            <!--/div-->
+                            <div class="btn-card btn-card-atividade">
+                                <button type="submit" value="<?= $atividade['idAtv'] ?>" name="deletar" class="btn-danger-full">Deletar</button>
+                            </div>
                         </div>
                     </div>
 

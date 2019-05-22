@@ -39,7 +39,7 @@
 
         public function listarAtividades() {
             $query = "
-                select a.id, a.eventoID, a.tema, a.local, TIME_FORMAT(a.hora, '%H:%i') as hora, a.descricao, e.id, e.nome
+                select a.id as idAtv, a.eventoID, a.tema, a.local, TIME_FORMAT(a.hora, '%H:%i') as hora, a.descricao, e.id, e.nome
                 from atividade as a, evento as e
                 where a.eventoID = :id and e.id = a.eventoID
                 order by a.tema;

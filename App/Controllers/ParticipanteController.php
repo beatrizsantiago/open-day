@@ -29,19 +29,14 @@
 
             //print_r($participante);
             
-            //if(count($participante->getUsuarioLogin()) == 0) {
+            if($_POST['nome'] == '' || $_POST['email'] == '' || $_POST['telefone'] == '' || $_POST['escola'] == '' || $_POST['area'] == '') {
+
+                header('Location: /cadastro_participante?cadastro=erro');
                 
+            } else {
                 $participante->criarParticipante();
                 header('Location: /area_profissional');
-                
-            //} else {
-                //$this->view->participante = [
-                    //'nome' => $_POST['nome'],
-                    //'instituicao' => $_POST['telefone'],
-                    //'curso' => $_POST['area'],
-                    //'login' => $_POST['login']
-                //];
-            //}
+            }
         }
 
         public function listarAreas() {
