@@ -79,8 +79,7 @@ hr {
         height: 90px;
         justify-content: space-between;
     }
-    .align-title-atv{
-        width: 70%;
-        justify-content: flex-start;
+    .title-lista-atv {
+        font-size: 18px;
     }
 }
