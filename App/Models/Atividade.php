@@ -39,10 +39,10 @@
 
         public function listarAtividades() {
             $query = "
-                select a.id, a.eventoID, a.tema, a.local, TIME_FORMAT(a.hora, '%H:%i') as hora, a.descricao, e.id, e.titulo
+                select a.id, a.eventoID, a.tema, a.local, TIME_FORMAT(a.hora, '%H:%i') as hora, a.descricao, e.id, e.nome
                 from atividade as a, evento as e
                 where a.eventoID = :id and e.id = a.eventoID
-                order by a.data;
+                order by a.tema;
             ";
 
             $stmt = $this->db->prepare($query);

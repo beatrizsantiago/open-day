@@ -46,18 +46,18 @@ button, .btn-link {
 }
 
 .btn-confirm-full {
-    background-color: #00a7bd;
+    background-color: #5087c7;
     color: #fff;
     border: none;
 }
 
 .btn-confirm {
-    color: #00a7bd;
-    border: solid 1px #00a7bd;
+    color: #5087c7;
+    border: solid 1px #5087c7;
 }
 
 .btn-confirm:hover {
-    background-color: #00a7bd;
+    background-color: #5087c7;
     color: #fff;
 }
 

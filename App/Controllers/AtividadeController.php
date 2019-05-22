@@ -7,6 +7,13 @@
 
     class AtividadeController extends Action {
 
+        public function indexAtividade() {
+            $listaAtividade = Container::getModel('Atividade');   
+            $listaAtividade->__set('id', $_GET['id']);
+            $this->view->atividades = $listaAtividade->listarAtividades();
+            $this->render('indexAtividade');
+        }
+
         public function cadastrarAtividade() {
             $atividade = Container::getModel('Atividade');
             $atividade->__set('eventoId', $_POST['id']);
@@ -19,6 +26,18 @@
 
             header('location: /index_evento');
         }
+
+        //public function acaoAtividade() {
+            //if(isset($_POST['deletar'])) {
+                //$deletarAtividade = Container::getModel('Atividade');
+                //$deletarAtividade->__set('id', $_POST['deletar']);
+
+                //$deletarAtividade->deletarAtividade();
+
+                //print_r($_POST['deletar']);
+                //header('Location: /index_atividade?id=' . $_POST['deletar']);
+            //}
+        //}
 
     }
 

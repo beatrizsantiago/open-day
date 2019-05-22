@@ -1,23 +1,14 @@
-.bg-img {
-    position: absolute;
-    right: 0px;
-}
-
-.bg-img img {
-    height: 99vh;
-    z-index: 1;
-}
-
 .card-login {
-    position: absolute;
+    position: relative;
     width: 270px;
-    height: 450px;
-    margin: 80px 0 0 80px;
+    height: 300px;
     padding: 30px;
     overflow: hidden;
     background-color: #fff;
     border-radius: 15px;
     box-shadow: var(--sombra-box);
+    top: -50%;
+    transform: translateY(30%);
     z-index: 100;
 }
 

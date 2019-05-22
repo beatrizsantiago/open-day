@@ -1,0 +1,38 @@
+.rodape {
+    position: relative;
+    width: 100%;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.rodape-login {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.rodape img, .rodape-login img {
+    width: 300px;
+    bottom: 10px;
+}
+
+.rodape h1, .rodape-login h1 {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+}
+
+.rodape h1 a, .rodape-login h1 a {
+    color: #fff;
+    text-decoration: none;
+}

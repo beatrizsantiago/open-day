@@ -27,9 +27,11 @@
             $participante->__set('escola', $_POST['escola']);
             $participante->__set('area', $_POST['area']);
 
+            //print_r($participante);
+            
             //if(count($participante->getUsuarioLogin()) == 0) {
-                //$participante->criarParticipante();
-
+                
+                $participante->criarParticipante();
                 header('Location: /area_profissional');
                 
             //} else {

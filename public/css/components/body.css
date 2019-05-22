@@ -1,0 +1,48 @@
+.bg-img {
+    background-image: url('../../img/fundo_azul.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bg-img-cadastro {
+    background-image: url('../../img/fundo_azul.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-img-atividade {
+    background-image: url('../../img/fundo_azul.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.font-titulo {
+    position: relative;
+    color: #ffcb05;
+    margin: 10px;
+    top: 0px;
+}
+
+.space-top-atv {
+    padding-top: 70px;
+}
+
+@media (max-width: 768px) {
+    .space-top-atv {
+        padding-top: 95px;
+    }
+}

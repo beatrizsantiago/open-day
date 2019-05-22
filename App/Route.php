@@ -60,31 +60,37 @@
                 'controller' => 'EventoController',
                 'action' => 'acaoEvento'
             ];
-
+            
             $routes['indexAtividade'] = [
                 'route' => '/index_atividade',
                 'controller' => 'AtividadeController',
                 'action' => 'indexAtividade'
             ];
-
+            
             $routes['atividadesEvento'] = [
                 'route' => '/atividades_evento',
                 'controller' => 'AtividadeController',
                 'action' => 'atividadesEvento'
             ];
-
+            
             $routes['criarAtividade'] = [
                 'route' => '/criar_atividade',
                 'controller' => 'AtividadeController',
                 'action' => 'criarAtividade'
             ];
-
+            
             $routes['cadastrarAtividade'] = [
                 'route' => '/cadastrar_atividade',
                 'controller' => 'AtividadeController',
                 'action' => 'cadastrarAtividade'
             ];
 
+            $routes['acaoAtividade'] = [
+                'route' => '/acao_atividade',
+                'controller' => 'AtividadeController',
+                'action' => 'acaoAtividade'
+            ];
+            
             $routes['areaProfissional'] = [
                 'route' => '/area_profissional',
                 'controller' => 'ParticipanteController',

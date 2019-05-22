@@ -38,23 +38,17 @@
     overflow: hidden;
 }
 
-.card-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
 .body-card {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 15px;
+    padding: 15px 15px 0px 15px;
     overflow: hidden;
 }
 
 .btn-card {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     margin-top: 10px;
 }

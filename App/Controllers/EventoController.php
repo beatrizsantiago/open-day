@@ -31,16 +31,23 @@
 
         public function acaoEvento() {
             if(isset($_POST['ver_atividades'])) {
-                $listaAtividade = Container::getModel('Atividade');
-                $listaAtividade->__set('id', $_POST['ver_atividades']);
-                $this->view->atividades = $listaAtividade->listarAtividades();
-                
-                $this->render('indexAtividade');
+                $id = $_POST['ver_atividades'];
+                header('Location: /index_atividade?id=' . $id);
                 //print_r($_POST['atividades']);
             }
 
             if(isset($_POST['criar_atividade'])) {
                $this->render('criarAtividade');
+            }
+
+            if(isset($_POST['deletar'])) {
+                $deletarEvento = Container::getModel('Evento');
+                $deletarEvento->__set('id', $_POST['deletar']);
+
+                $deletarEvento->deletarEvento();
+
+                //print_r($deletarEvento);
+                header('Location: /index_evento');
             }
         }
     }

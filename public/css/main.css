@@ -1,6 +1,11 @@
 :root {
     --sombra-box: 0px 0px 20px rgba(31, 31, 31, 0.1);
-    --cor-sge: #41b9ff;
+    --cor-sge: #5087c7;
+}
+
+@font-face {
+    font-family: Europa;
+    src: url('../fonts/EuropaRegular.otf');
 }
 
 .grid-base {
@@ -23,7 +28,7 @@
 
 body {
     background-color: #fafafa;
-    font-family: sans-serif;
+    font-family: Europa;
     margin: 0px;
 }
 

@@ -1,37 +1,40 @@
-<div class="header-align">
-    <a href="/area_profissional" class="btn-link voltar btn-confirm-full" >Voltar</a>
-    <?php foreach($this->view->atividades as $atividade) { ?>
-        <div class="align-title-atv">
-            <h1 class="title-lista-atv"><?= $atividade['nome'] ?> </h1>
-        </div>
-    <?php } ?>
-</div>
+<body class="bg-img-atividade">
+    <div class="header-align">
+        <a href="/area_profissional" class="btn-link voltar btn-confirm-full" >Voltar</a>
+        <?php foreach($this->view->atividades as $atividade) { ?>
+            <div class="align-title-atv">
+                <h1 class="title-lista-atv"><?= $atividade['nome'] ?> </h1>
+            </div>
+        <?php } ?>
+    </div>
 
-<section class="grid-base">
-    <main class="content">
+    <main class="content space-top-atv">
         <section class="card">
             <?php foreach($this->view->atividades as $atividade) { ?>
                 <form action="/acao_atividade" method="post" class="card-atividade card-block-column">
+                
                     <div class="card-title">
                         <h1><?= $atividade['tema'] ?></h1>
                         <hr>
                     </div>
+                    
+                    <div class="body-card body-card-atividade">
+                        <div class="div-grande">Local: <strong><?= $atividade['local'] ?></strong></div>
+                        <div class="div-grande">Hora: <strong><?= $atividade['hora'] ?>h</strong></div>
 
-                    <div class="card-block-row">
-                        <div class="body-card body-card-atividade">
-                            <div class="div-grande">Local: <strong><?= $atividade['local'] ?></strong></div>
-                            <div class="div-grande">Hora: <strong><?= $atividade['hora'] ?>h</strong></div>
+                        <?php if($atividade['descricao'] != '') { ?>
+                            <p><?= $atividade['descricao'] ?></p>
+                        <?php } else { ?>
+                            <br/>
+                        <?php } ?>
 
-                            <?php if($atividade['descricao'] != '') { ?>
-                                <p><?= $atividade['descricao'] ?></p>
-                            <?php } else { ?>
-                                <br/>
-                            <?php } ?>
-
-                        </div>
                     </div>
                 </form>
             <?php } ?>
         </section>
     </main>
-</section>
+    <footer class="rodape">
+        <img src="./img/logo_branca.png" alt="wyden">
+        <h1>Sistema desenvolvido pela aluna <a href="https://beatrizsantiago.github.io/">@Beatriz Santiago</a></h1>
+    </footer>
+</body>

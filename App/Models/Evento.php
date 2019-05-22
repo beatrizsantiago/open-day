@@ -24,7 +24,7 @@
 
             $stmt = $this->db->prepare($query);
 
-            $stmt->bindValue(':titulo', $this->__get('titulo'));         
+            $stmt->bindValue(':nome', $this->__get('nome'));         
             $stmt->bindValue(':descricao', $this->__get('descricao'));
             $stmt->execute();
 
@@ -33,7 +33,7 @@
 
         public function listarEventos() {
             $query = "
-                select e.id, e.titulo, e.descricao
+                select e.id, e.nome, e.descricao
                 from evento as e
             ";
 

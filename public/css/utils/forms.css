@@ -38,6 +38,34 @@ input, select, textarea {
     box-shadow: var(--sombra-box);
 }
 
+@media (max-width: 770px)  {
+    .form-register {
+        width: 450px;
+    }
+}
+
+@media (max-width: 530px)  {
+    .form-register {
+        width: 350px;
+    }
+}
+
+@media (max-width: 420px)  {
+    .form-register {
+        width: 320px;
+        border-radius: 10px;
+        padding: 20px 15px;
+    }
+}
+
+@media (max-width: 360px)  {
+    .form-register {
+        width: 260px;
+        border-radius: 10px;
+        padding: 20px 10px;
+    }
+}
+
 .input-grande {
     width: 99%;
     display: block;

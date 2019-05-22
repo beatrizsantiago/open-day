@@ -41,26 +41,6 @@
     margin-right: 12px;
 }
 
-/*.sair {
-    position: absolute;
-    background-color: #005252;
-    bottom: 0px;
-    width: 90%;
-}*/
-
-.img-perfil {
-    width: 120px;
-    border-radius: 50%;
-}
-
-.apelido {
-    color: #002636;
-    font-size: 20px;
-    text-align: center;
-}
-
 .voltar {
-    position: fixed;
-    right: 20px;
     z-index: 150;
 }
