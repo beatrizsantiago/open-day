@@ -55,6 +55,13 @@
 
             //print_r($_GET['id']);
         }
+
+        public function listarParticipante() {
+            $listarParticipante = Container::getModel('Participante');
+            $this->view->participante = $listarParticipante->listarParticipantes();
+            
+            $this->render('listarParticipantes');
+        }
     }
 
 ?>

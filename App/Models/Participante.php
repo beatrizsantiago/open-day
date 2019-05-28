@@ -37,6 +37,17 @@
             return $this;
         }
 
+        public function listarParticipantes() {
+            $query = "
+                select * from participante;
+            ";
+
+            $stmt = $this->db->prepare($query);
+            $stmt->execute();
+
+            return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        }
+
     }
 
 ?>

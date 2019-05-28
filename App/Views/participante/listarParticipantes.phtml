@@ -1,0 +1,37 @@
+<?php
+
+    require_once '../App/ValidaLogin.php';
+
+?>
+
+<div class="align-title"><h1 class="title">Lista de Participantes</h1></div>
+<aside class="menu-topo">
+    <nav class="menu">
+        <div style="display: flex; flex-direction: row">
+        <a href="/index_evento"><img src="./img/icons/eventos.png"><span style="color: #fff" class="esconder">Áreas Profissionais<span></a>
+        </div>
+        <a href="/sair" class="sair">Sair</a>
+    </nav>
+</aside>
+
+<section class="grid-base">
+    <main class="content">
+        <section class="card">
+            <?php foreach($this->view->participante as $participante) { ?>
+                <div class="card-evento card-block-column">
+                    <div class="card-title">
+                        <h1 class="card-title-participante"><?= $participante['nome'] ?></h1>
+                        <hr>
+                    </div>
+                    
+                    <div class="body-card body-card-participante">
+                        <div class="div-grande">E-mail: <strong><?= $participante['email'] ?></strong></div>
+                        <div class="div-grande">Telefone: <strong><?= $participante['telefone'] ?></strong></div>
+                        <div class="div-grande">Escola: <strong><?= $participante['escola'] ?></strong></div>
+                        <div class="div-grande">Área de Interesse: <strong><?= $participante['area'] ?></strong></div>
+                    </div>
+                </div>
+            <?php } ?>
+        </section>
+    </main>
+</section>

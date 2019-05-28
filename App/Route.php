@@ -19,6 +19,12 @@
                 'action' => 'cadastroParticipante'
             ];
 
+            $routes['listarParticipante'] = [
+                'route' => '/listar_participante',
+                'controller' => 'ParticipanteController',
+                'action' => 'listarParticipante'
+            ];
+
             $routes['cadastrar'] = [
                 'route' => '/cadastrar',
                 'controller' => 'ParticipanteController',
